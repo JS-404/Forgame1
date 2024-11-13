@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بازی تلگرامی</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <!-- منوی پایین صفحه -->
+    <div class="menu">
+        <button onclick="showPage('scoreboard')">Source</button>
+        <button onclick="showPage('farm')">Mining</button>
+        <button onclick="showPage('tasks')">Task</button>
+    </div>
+
+    <!-- صفحه امتیازات (اولین صفحه) -->
+    <div id="scoreboard" class="page">
+        <h2>نفرات برتر</h2>
+        <p>امتیاز شما: <span id="user-score">0</span></p>
+        <ul>
+            <li>کاربر 1: 100 امتیاز</li>
+            <li>کاربر 2: 90 امتیاز</li>
+            <li>کاربر 3: 80 امتیاز</li>
+        </ul>
+        <p>تعداد کاربران: <span id="user-count">10</span></p>
+        
+        <!-- دکمه اتصال به ولت تون‌کیپر -->
+        <button id="connect-wallet-btn" onclick="connectTonkeeper()">Connect Wallet</button>
+        
+    </div>
+
+    <!-- صفحه فارم (صفحه اصلی) -->
+    <div id="farm" class="page">
+        <div class="Name"><h2>Wrappd Coin</h2></div>
+        <p>Balance :<span id="collected-rewards">0</span></p>
+        <div class="coin-container">
+            <img id="coin" src="img/mine-mining.gif" alt="Coin">
+        </div>    
+        <button id="claim-btn" onclick="claimRewards()" disabled>Claim</button>
+        
+        <p id="timer">زمان باقی‌مانده: <span id="time-left">60</span> ثانیه</p>
+    </div>
+
+    <!-- صفحه تسک‌ها و دعوت‌ها -->
+    <div id="tasks" class="page">
+        <h2>تسک‌ها و دعوت‌ها</h2>
+        <p>برای دعوت دوستان خود به بازی، لینک زیر را ارسال کنید:</p>
+        <p><a href="https://yourgame.com/invite">دعوت به بازی</a></p>
+        <ul>
+            <li>تسک 1: انجام دادن کار X</li>
+            <li>تسک 2: دعوت از 5 نفر</li>
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
