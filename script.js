@@ -64,12 +64,14 @@ setInterval(() => {
 // اتصال به Tonkeeper
 // اتصال به Tonkeeper بدون انتقال
 function connectTonkeeper() {
-    const walletAddress = "UQChg_k1hOSm6nJkMGIaKU37sA4ciStVG9lGtMK8x7IY7fKU"; // آدرس ولت شما
-    const amountToSend = 1000000000;  // مقدار انتقالی (مثلاً 1 TON به اندازه 1000000000 نانوTON)
+    const walletAddress = "UQChg_k1hOSm6nJkMGIaKU37sA4ciStVG9lGtMK8x7IY7fKU";  // آدرس ولت شما
+    const amountToSend = 1000000000;  // مقدار توکن (1 TON به اندازه 1000000000 نانوTON)
     const tonkeeperDeeplink = `ton://transfer/${walletAddress}?amount=${amountToSend}`;
 
     // هدایت کاربر به تون‌کیپر از طریق Deeplink
     window.location.href = tonkeeperDeeplink;
+}
+
 
     // بعد از ارسال Deeplink، باید کاربر تاییدیه‌ای را در تون‌کیپر مشاهده کند
 }
